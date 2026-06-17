@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>隐私政策 — Knot</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f5f5f5; color: #333; padding: 20px;
+  }
+  .container {
+    background: #fff; border-radius: 12px; padding: 40px;
+    max-width: 720px; margin: 0 auto; box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  }
+  h1 { font-size: 24px; margin-bottom: 8px; }
+  .updated { color: #888; font-size: 13px; margin-bottom: 24px; }
+  h2 { font-size: 18px; margin: 28px 0 12px; color: #222; }
+  h3 { font-size: 15px; margin: 20px 0 8px; color: #444; }
+  p { font-size: 14px; line-height: 1.8; margin-bottom: 12px; }
+  ul { font-size: 14px; line-height: 1.8; margin: 8px 0 12px 20px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0 16px; font-size: 13px; }
+  th, td { border: 1px solid #e0e0e0; padding: 8px 12px; text-align: left; }
+  th { background: #f8f8f8; font-weight: 600; }
+  a { color: #3498db; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .lang-switch { text-align: right; font-size: 13px; margin-bottom: 16px; }
+  .lang-switch a { color: #888; }
+  .disclaimer { margin-top: 32px; padding-top: 16px; border-top: 1px solid #eee; font-size: 12px; color: #999; line-height: 1.6; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <p class="lang-switch"><a href="privacy-policy-en.html">English</a></p>
+
+  <h1>🔒 隐私政策</h1>
+  <p class="updated">最后更新日期：2026-06-14</p>
+
+  <h2>1. 概述</h2>
+  <p>Knot（以下简称"本应用"）重视您的隐私。本隐私政策说明了我们如何收集、使用、披露和保护您的个人信息。请仔细阅读本政策，以了解我们在数据处理方面的做法以及您的权利。</p>
+  <p>本应用面向全球全年龄段用户提供服务，我们遵守适用的隐私法律，包括但不限于美国《加利福尼亚州消费者隐私法案》(CCPA/CPRA)、《儿童在线隐私保护法》(COPPA)，以及欧盟《通用数据保护条例》(GDPR) 等其他适用法规。</p>
+
+  <h2>2. 我们收集的信息</h2>
+
+  <h3>2.1 您主动提供的信息</h3>
+  <table>
+    <tr><th>数据类别</th><th>具体内容</th><th>用途</th></tr>
+    <tr><td>账户信息</td><td>邮箱地址、加密后的登录密码</td><td>用户身份识别与登录认证</td></tr>
+    <tr><td>第三方登录信息</td><td>Apple ID 或 Google 账户的 identity token（仅用于验证身份，不存储第三方密码）</td><td>Apple Sign-In / Google Sign-In 快捷登录</td></tr>
+    <tr><td>个人资料</td><td>显示名称（可自行设置）</td><td>账户个性化展示</td></tr>
+    <tr><td>笔记内容</td><td>您创建的笔记正文、标签、附件（图片、音频）</td><td>提供核心笔记服务</td></tr>
+    <tr><td>语音数据</td><td>录音文件及语音转文字结果（转换在设备端完成）</td><td>语音笔记功能</td></tr>
+    <tr><td>提醒设置</td><td>您为笔记设置的提醒时间</td><td>到时间发送本地通知</td></tr>
+  </table>
+
+  <h3>2.2 自动收集的信息</h3>
+  <table>
+    <tr><th>数据类别</th><th>具体内容</th><th>用途</th></tr>
+    <tr><td>设备信息</td><td>设备名称、平台类型（Android/iOS）</td><td>多设备管理与安全审计</td></tr>
+    <tr><td>关联向量</td><td>笔记内容经 embedding 模型计算的 384 维向量</td><td>自动发现笔记间的关联关系（完全自动化，不涉及人工审阅）</td></tr>
+    <tr><td>崩溃日志</td><td>应用崩溃时的错误堆栈（通过 Sentry SDK 收集，不包含笔记内容）</td><td>提升应用稳定性</td></tr>
+    <tr><td>版本历史</td><td>笔记编辑过程中自动保存的历史版本</td><td>版本回退功能</td></tr>
+  </table>
+
+  <h3>2.3 我们不收集的信息</h3>
+  <ul>
+    <li><strong>精确地理位置</strong>：我们不收集 GPS 定位数据。</li>
+    <li><strong>通讯录</strong>：我们不访问您的设备通讯录。</li>
+    <li><strong>浏览历史</strong>：我们不跟踪您在其他应用或网站上的活动。</li>
+    <li><strong>生物识别信息</strong>：我们不收集指纹、面容等生物特征。</li>
+  </ul>
+
+  <h2>3. 数据存储位置与安全</h2>
+  <ul>
+    <li>所有数据存储在我们自托管的服务器上（PostgreSQL + pgvector 数据库 + 云对象存储）。</li>
+    <li>中国版用户的服务器部署于中国大陆，其余用户部署于美国，就近存储以降低延迟。</li>
+    <li><strong>传输安全</strong>：所有 API 通信使用 HTTPS (TLS 1.2+) 加密。</li>
+    <li><strong>存储安全</strong>：密码使用 bcrypt 加盐哈希存储；附件使用私有存储桶 + 签名 URL 访问。</li>
+    <li><strong>访问控制</strong>：所有 API 请求需携带 JWT token 验证身份，支持 token 自动刷新。</li>
+    <li><strong>版本记录</strong>：笔记自动保存历史版本，可在版本抽屉中查看和恢复。</li>
+  </ul>
+
+  <h2>4. 数据如何使用</h2>
+  <ul>
+    <li><strong>仅为您本人服务</strong>：您的笔记数据和关联向量仅用于为您提供笔记管理、自动关联发现、全文模糊搜索和知识图谱功能。</li>
+    <li><strong>自动关联</strong>：系统使用 embedding 模型将笔记内容转换为向量以自动发现相关笔记——此过程完全自动化，不涉及人工审阅。</li>
+    <li><strong>本地提醒</strong>：提醒通知由设备本地调度，提醒数据不会发送给第三方推送服务。</li>
+    <li><strong>不用于广告</strong>：我们不使用您的数据投放广告或构建用户画像。</li>
+    <li><strong>不用于自动化决策</strong>：我们不会基于您的数据做出对您产生法律或类似重大影响的自动化决策。</li>
+  </ul>
+
+  <h2>5. 数据共享与披露</h2>
+
+  <h3>5.1 与第三方共享</h3>
+  <p>我们<strong>不出售</strong>您的个人信息（"出售"定义参见 CCPA）。除非以下情况，我们不会将您的个人数据分享给任何第三方：</p>
+  <table>
+    <tr><th>共享情形</th><th>说明</th></tr>
+    <tr><td>法律要求</td><td>依法向执法机构或监管机关披露必要信息</td></tr>
+    <tr><td>服务提供商</td><td>向受合同约束的服务提供商（如云存储）披露必要数据以运营服务</td></tr>
+    <tr><td>经您同意</td><td>在获得您明确同意的情况下向特定第三方披露</td></tr>
+  </table>
+
+  <h3>5.2 第三方 SDK 与服务</h3>
+  <p>本应用使用以下第三方 SDK，它们有各自的隐私政策：</p>
+  <table>
+    <tr><th>SDK</th><th>用途</th><th>收集的数据</th><th>隐私政策链接</th></tr>
+    <tr><td><code>sign_in_with_apple</code></td><td>Apple 登录</td><td>Identity token（Apple 提供）</td><td><a href="https://www.apple.com/legal/privacy/" target="_blank">Apple 隐私政策</a></td></tr>
+    <tr><td><code>google_sign_in</code></td><td>Google 登录</td><td>Identity token（Google 提供）</td><td><a href="https://policies.google.com/privacy" target="_blank">Google 隐私政策</a></td></tr>
+    <tr><td><code>speech_to_text</code></td><td>语音转文字</td><td>录音数据（完全在设备端处理，不上传云端）</td><td>使用设备原生 API</td></tr>
+    <tr><td><code>sentry_flutter</code></td><td>崩溃上报</td><td>错误堆栈、设备型号、操作系统版本（不含笔记内容或个人身份信息）</td><td><a href="https://sentry.io/privacy/" target="_blank">Sentry 隐私政策</a></td></tr>
+    <tr><td><code>flutter_local_notifications</code></td><td>本地通知</td><td>提醒时间（仅存储在设备本地）</td><td>不涉及网络通信</td></tr>
+  </table>
+
+  <h2>6. 数据保留期限</h2>
+  <table>
+    <tr><th>数据类型</th><th>保留期限</th><th>说明</th></tr>
+    <tr><td>活跃账户数据</td><td>账户存续期间</td><td>只要您保持账户活跃，数据将持续保留</td></tr>
+    <tr><td>已删除笔记</td><td>30 天（回收站）</td><td>笔记删除后进入回收站，30 天后永久删除</td></tr>
+    <tr><td>笔记历史版本</td><td>与笔记同期保留</td><td>笔记删除后其历史版本同步删除</td></tr>
+    <tr><td>已注销账户数据</td><td>30 天冷却期后永久删除</td><td>冷却期内可联系客服恢复；冷却期后数据不可恢复</td></tr>
+    <tr><td>导出文件</td><td>下载链接 24 小时内有效</td><td>过期后需重新发起导出请求</td></tr>
+    <tr><td>崩溃日志 (Sentry)</td><td>90 天</td><td>Sentry 默认保留策略</td></tr>
+  </table>
+
+  <h2>7. 您的隐私权利</h2>
+  <p>根据适用法律（包括 CCPA/CPRA），您享有以下权利：</p>
+  <table>
+    <tr><th>权利</th><th>说明</th><th>如何行使</th></tr>
+    <tr><td>知情权</td><td>您有权知道我们收集了哪些个人信息及其用途</td><td>查阅本隐私政策</td></tr>
+    <tr><td>访问权</td><td>您有权请求获取我们持有的您的个人信息副本</td><td>使用应用内导出功能（设置 → 导出数据），导出 zip 包含全部笔记（Markdown 格式）+ 附件</td></tr>
+    <tr><td>删除权</td><td>您有权请求删除您的个人信息</td><td>设置 → 注销账户；或删除单条笔记（回收站 30 天后自动清除）</td></tr>
+    <tr><td>更正权</td><td>您有权更正不准确的个人信息</td><td>在设置中修改显示名称、密码</td></tr>
+    <tr><td>数据可携权</td><td>您有权以通用格式获取您的数据并传输至其他服务</td><td>导出 zip 文件可在另一 Knot 服务器重新导入</td></tr>
+    <tr><td>选择退出出售权</td><td>您有权选择退出个人信息的"出售"</td><td>我们不出售个人信息，因此无需选择退出</td></tr>
+    <tr><td>不受歧视权</td><td>行使上述权利不会导致我们拒绝提供服务或收取不同价格</td><td>—</td></tr>
+  </table>
+
+  <h3>7.1 加利福尼亚州居民特定权利</h3>
+  <p>如果您是加利福尼亚州居民，根据 CCPA/CPRA，您还有权：</p>
+  <ul>
+    <li>请求披露我们收集的个人信息类别和具体内容（申请后 45 天内回复）</li>
+    <li>请求披露个人信息的来源类别、收集或出售的商业目的，以及与之共享的第三方类别</li>
+    <li>限制对敏感个人信息的使用和披露（我们目前不收集 CCPA 定义的敏感个人信息）</li>
+  </ul>
+  <p>如需行使上述权利，请通过第 12 节中的联系方式联系我们。我们将在收到可验证的请求后 45 天内回复。</p>
+
+  <h3>7.2 授权代理人</h3>
+  <p>您可以指定授权代理人代表您提交 CCPA 请求。代理人需提供您的书面授权证明。</p>
+
+  <h2>8. 儿童隐私 (COPPA)</h2>
+  <p>本应用面向全年龄段用户开放。13 岁以下儿童可在父母或法定监护人的指导和同意下使用本应用。我们遵守《儿童在线隐私保护法》(COPPA) 的规定。如果您认为我们可能持有 13 岁以下儿童的信息且其监护人未提供适当同意，请联系我们。</p>
+
+  <h2>9. 请勿追踪 (Do Not Track)</h2>
+  <p>我们的服务不会响应浏览器的"请勿追踪"(DNT) 信号，因为我们不跨网站或应用跟踪用户行为。</p>
+
+  <h2>10. 数据泄露通知</h2>
+  <p>如果发生涉及您个人信息的数据泄露事件，我们将在法律要求的时限内通知您和相关监管机构。</p>
+
+  <h2>11. 政策更新</h2>
+  <p>本隐私政策可能不时更新。重大变更时，我们将通过以下方式告知您：</p>
+  <ul>
+    <li>应用内弹窗通知</li>
+    <li>如变更涉及新的数据收集用途，我们将重新获取您的同意</li>
+  </ul>
+  <p>继续使用本应用即表示接受更新后的隐私政策。</p>
+
+  <h2>12. 联系方式</h2>
+  <p>如有任何隐私相关问题或希望行使您的权利，请通过以下方式联系我们：</p>
+  <ul>
+    <li>📧 邮箱：<a href="mailto:leechyu89@gmail.com">leechyu89@gmail.com</a></li>
+    <li>⏱ 响应时间：我们将在 7 个工作日内回复</li>
+  </ul>
+
+
+</div>
+</body>
+</html>

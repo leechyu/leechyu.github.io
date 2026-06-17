@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Knot</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f5f5f5; color: #333; padding: 20px;
+  }
+  .container {
+    background: #fff; border-radius: 12px; padding: 40px;
+    max-width: 720px; margin: 0 auto; box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  }
+  h1 { font-size: 24px; margin-bottom: 8px; }
+  .updated { color: #888; font-size: 13px; margin-bottom: 24px; }
+  h2 { font-size: 18px; margin: 28px 0 12px; color: #222; }
+  h3 { font-size: 15px; margin: 20px 0 8px; color: #444; }
+  p { font-size: 14px; line-height: 1.8; margin-bottom: 12px; }
+  ul { font-size: 14px; line-height: 1.8; margin: 8px 0 12px 20px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0 16px; font-size: 13px; }
+  th, td { border: 1px solid #e0e0e0; padding: 8px 12px; text-align: left; }
+  th { background: #f8f8f8; font-weight: 600; }
+  a { color: #3498db; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .lang-switch { text-align: right; font-size: 13px; margin-bottom: 16px; }
+  .lang-switch a { color: #888; }
+  .disclaimer { margin-top: 32px; padding-top: 16px; border-top: 1px solid #eee; font-size: 12px; color: #999; line-height: 1.6; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <p class="lang-switch"><a href="privacy-policy-zh.html">中文</a></p>
+
+  <h1>🔒 Privacy Policy</h1>
+  <p class="updated">Last Updated: 2026-06-14</p>
+
+  <h2>1. Overview</h2>
+  <p>Knot ("the App") values your privacy. This Privacy Policy explains how we collect, use, disclose, and protect your personal information. Please read this policy carefully to understand our practices regarding your data and your rights.</p>
+  <p>The App serves users of all ages globally. We comply with applicable privacy laws, including but not limited to the U.S. California Consumer Privacy Act (CCPA/CPRA), the Children's Online Privacy Protection Act (COPPA), the EU General Data Protection Regulation (GDPR), and other applicable regulations.</p>
+
+  <h2>2. Information We Collect</h2>
+
+  <h3>2.1 Information You Provide</h3>
+  <table>
+    <tr><th>Data Category</th><th>Details</th><th>Purpose</th></tr>
+    <tr><td>Account Information</td><td>Email address, hashed password (bcrypt)</td><td>Identity verification and login authentication</td></tr>
+    <tr><td>Third-Party Login</td><td>Identity token from Apple ID or Google account (used solely for authentication; third-party passwords are never stored)</td><td>Apple Sign-In / Google Sign-In</td></tr>
+    <tr><td>Profile</td><td>Display name (user-configurable)</td><td>Account personalization</td></tr>
+    <tr><td>Note Content</td><td>Note body text, tags, attachments (images, audio)</td><td>Core note-taking service</td></tr>
+    <tr><td>Voice Data</td><td>Audio recordings and speech-to-text transcripts (processing occurs on-device)</td><td>Voice note feature</td></tr>
+    <tr><td>Reminder Settings</td><td>Reminder times set for notes</td><td>Local notification scheduling</td></tr>
+  </table>
+
+  <h3>2.2 Information Collected Automatically</h3>
+  <table>
+    <tr><th>Data Category</th><th>Details</th><th>Purpose</th></tr>
+    <tr><td>Device Information</td><td>Device name, platform type (Android/iOS)</td><td>Multi-device management and security audit</td></tr>
+    <tr><td>Association Vectors</td><td>384-dimensional embeddings computed from note content</td><td>Automatic note link discovery (fully automated; no human review)</td></tr>
+    <tr><td>Crash Logs</td><td>Error stack traces collected via Sentry SDK (note content is never included)</td><td>Improving app stability</td></tr>
+    <tr><td>Version History</td><td>Auto-saved historical versions of notes during editing</td><td>Version rollback functionality</td></tr>
+  </table>
+
+  <h3>2.3 Information We Do NOT Collect</h3>
+  <ul>
+    <li><strong>Precise Geolocation</strong>: We do not collect GPS location data.</li>
+    <li><strong>Contacts</strong>: We do not access your device contacts.</li>
+    <li><strong>Browsing History</strong>: We do not track your activity on other apps or websites.</li>
+    <li><strong>Biometric Data</strong>: We do not collect fingerprints, facial scans, or other biometric identifiers.</li>
+  </ul>
+
+  <h2>3. Data Storage &amp; Security</h2>
+  <ul>
+    <li>All data is stored on our self-hosted servers (PostgreSQL + pgvector database with cloud object storage).</li>
+    <li>For users under the China edition, servers are deployed in mainland China; for all other users, servers are deployed in the United States, ensuring low-latency access.</li>
+    <li><strong>Transit Security</strong>: All API communication is encrypted via HTTPS (TLS 1.2+).</li>
+    <li><strong>Storage Security</strong>: Passwords are stored using bcrypt salted hashing; attachments use private storage buckets with signed URL access.</li>
+    <li><strong>Access Control</strong>: All API requests require a JWT token for authentication, with automatic token refresh support.</li>
+    <li><strong>Version History</strong>: Notes are auto-saved with historical versions, viewable and restorable in the versions drawer.</li>
+  </ul>
+
+  <h2>4. How We Use Your Data</h2>
+  <ul>
+    <li><strong>For Your Personal Use Only</strong>: Your note data and association vectors serve solely to provide you with note management, automatic link discovery, fuzzy full-text search, and knowledge graph visualization.</li>
+    <li><strong>Automatic Association</strong>: The system uses an embedding model to convert note content into vectors for automatic discovery of related notes — this process is fully automated with no human review.</li>
+    <li><strong>Local Reminders</strong>: Reminder notifications are scheduled locally on your device; reminder data is not sent to any third-party push notification service.</li>
+    <li><strong>No Advertising</strong>: We do not use your data for advertising or user profiling.</li>
+    <li><strong>No Automated Decision-Making</strong>: We do not make automated decisions that produce legal or similarly significant effects concerning you.</li>
+  </ul>
+
+  <h2>5. Data Sharing &amp; Disclosure</h2>
+
+  <h3>5.1 Sharing with Third Parties</h3>
+  <p>We <strong>do not sell</strong> your personal information (as "sale" is defined under the CCPA). Except as described below, we do not share your personal data with any third party:</p>
+  <table>
+    <tr><th>Disclosure Scenario</th><th>Description</th></tr>
+    <tr><td>Legal Obligations</td><td>Disclose necessary information to law enforcement or regulatory authorities as required by law</td></tr>
+    <tr><td>Service Providers</td><td>Disclose necessary data to contractually bound service providers (e.g., cloud storage) to operate the service</td></tr>
+    <tr><td>With Your Consent</td><td>Disclose to specific third parties with your explicit consent</td></tr>
+  </table>
+
+  <h3>5.2 Third-Party SDKs &amp; Services</h3>
+  <p>The App uses the following third-party SDKs, each of which has its own privacy policy:</p>
+  <table>
+    <tr><th>SDK</th><th>Purpose</th><th>Data Collected</th><th>Privacy Policy</th></tr>
+    <tr><td><code>sign_in_with_apple</code></td><td>Apple Sign-In</td><td>Identity token (provided by Apple)</td><td><a href="https://www.apple.com/legal/privacy/" target="_blank">Apple Privacy Policy</a></td></tr>
+    <tr><td><code>google_sign_in</code></td><td>Google Sign-In</td><td>Identity token (provided by Google)</td><td><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></td></tr>
+    <tr><td><code>speech_to_text</code></td><td>Speech-to-text</td><td>Audio recording (processed entirely on-device; not uploaded)</td><td>Uses device native API</td></tr>
+    <tr><td><code>sentry_flutter</code></td><td>Crash reporting</td><td>Error stack traces, device model, OS version (does NOT include note content or PII)</td><td><a href="https://sentry.io/privacy/" target="_blank">Sentry Privacy Policy</a></td></tr>
+    <tr><td><code>flutter_local_notifications</code></td><td>Local notifications</td><td>Reminder time (stored locally on device only)</td><td>No network communication</td></tr>
+  </table>
+
+  <h2>6. Data Retention Periods</h2>
+  <table>
+    <tr><th>Data Type</th><th>Retention Period</th><th>Notes</th></tr>
+    <tr><td>Active Account Data</td><td>Duration of account activity</td><td>Data retained as long as your account remains active</td></tr>
+    <tr><td>Deleted Notes</td><td>30 days (Trash)</td><td>Notes enter Trash upon deletion; permanently deleted after 30 days</td></tr>
+    <tr><td>Note Version History</td><td>Coextensive with note retention</td><td>Automatically deleted when the note is deleted</td></tr>
+    <tr><td>Account Deletion</td><td>30-day cooling-off period, then permanent deletion</td><td>Recoverable upon request during cooling-off; irreversible thereafter</td></tr>
+    <tr><td>Export Files</td><td>Download link valid for 24 hours</td><td>Re-initiate export after link expiration</td></tr>
+    <tr><td>Crash Logs (Sentry)</td><td>90 days</td><td>Sentry's default retention policy</td></tr>
+  </table>
+
+  <h2>7. Your Privacy Rights</h2>
+  <p>Depending on your jurisdiction and applicable law (including CCPA/CPRA), you may have the following rights:</p>
+  <table>
+    <tr><th>Right</th><th>Description</th><th>How to Exercise</th></tr>
+    <tr><td>Right to Know</td><td>You have the right to know what personal information we collect and how we use it</td><td>Review this Privacy Policy</td></tr>
+    <tr><td>Right to Access</td><td>You have the right to request a copy of the personal information we hold about you</td><td>Use the in-app export feature (Settings → Export Data); the exported zip contains all notes (Markdown) + attachments</td></tr>
+    <tr><td>Right to Delete</td><td>You have the right to request deletion of your personal information</td><td>Settings → Delete Account; or delete individual notes (cleared from Trash after 30 days)</td></tr>
+    <tr><td>Right to Correct</td><td>You have the right to correct inaccurate personal information</td><td>Edit display name and password in Settings</td></tr>
+    <tr><td>Right to Data Portability</td><td>You have the right to obtain your data in a portable format and transfer it to another service</td><td>Exported zip files can be re-imported on another Knot server</td></tr>
+    <tr><td>Right to Opt Out of Sale</td><td>You have the right to opt out of the "sale" of your personal information</td><td>We do not sell personal information, so no opt-out is necessary</td></tr>
+    <tr><td>Right to Non-Discrimination</td><td>Exercising your rights will not result in denial of service or different pricing</td><td>—</td></tr>
+  </table>
+
+  <h3>7.1 California Resident-Specific Rights</h3>
+  <p>If you are a California resident, under the CCPA/CPRA you additionally have the right to:</p>
+  <ul>
+    <li>Request disclosure of the categories and specific pieces of personal information we have collected (response within 45 days)</li>
+    <li>Request disclosure of the categories of sources from which personal information is collected, the business or commercial purpose for collecting or selling, and the categories of third parties with whom we share it</li>
+    <li>Limit the use and disclosure of sensitive personal information (we do not currently collect "sensitive personal information" as defined by the CCPA)</li>
+  </ul>
+  <p>To exercise these rights, please contact us using the information in Section 12. We will respond to verifiable requests within 45 days.</p>
+
+  <h3>7.2 Authorized Agents</h3>
+  <p>You may designate an authorized agent to submit a CCPA request on your behalf. The agent must provide proof of your written authorization.</p>
+
+  <h2>8. Children's Privacy (COPPA)</h2>
+  <p>The App is open to users of all ages. Children under the age of 13 may use the App with the guidance and consent of a parent or legal guardian. We comply with the Children's Online Privacy Protection Act (COPPA). If you believe we may have information from a child under 13 without appropriate parental consent, please contact us.</p>
+
+  <h2>9. Do Not Track</h2>
+  <p>Our service does not respond to "Do Not Track" (DNT) signals from browsers, as we do not track user behavior across websites or applications.</p>
+
+  <h2>10. Data Breach Notification</h2>
+  <p>In the event of a data breach involving your personal information, we will notify you and relevant regulatory authorities within the timeframe required by applicable law.</p>
+
+  <h2>11. Policy Updates</h2>
+  <p>This Privacy Policy may be updated from time to time. For significant changes, we will notify you through:</p>
+  <ul>
+    <li>An in-app notification</li>
+    <li>Where changes involve new data collection purposes, we will seek your consent again</li>
+  </ul>
+  <p>Your continued use of the App after such changes constitutes acceptance of the updated Privacy Policy.</p>
+
+  <h2>12. Contact Us</h2>
+  <p>For privacy-related inquiries or to exercise your rights, please contact us at:</p>
+  <ul>
+    <li>📧 Email: <a href="mailto:leechyu89@gmail.com">leechyu89@gmail.com</a></li>
+    <li>⏱ Response Time: We will respond within 7 business days</li>
+  </ul>
+
+</div>
+</body>
+</html>
