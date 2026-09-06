@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LedFrey — Support</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    max-width: 720px; margin: 0 auto; padding: 24px 20px 60px;
+    line-height: 1.7; color: #1d1d1f; background: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e8e8ea; background: #141416; }
+    a { color: #6cb2ff; }
+  }
+  a { color: #0066cc; }
+  header { border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: 16px; margin-bottom: 28px; }
+  .app-name { font-size: 28px; font-weight: 700; letter-spacing: -.5px; }
+  .app-name span { color: #34c759; }
+  .page-title { font-size: 15px; color: rgba(128,128,128,.9); margin-top: 4px; }
+  .lang-switch { font-size: 14px; margin-top: 12px; }
+  h2 { font-size: 19px; margin-top: 36px; }
+  h3 { font-size: 16px; margin-bottom: 6px; }
+  p, li { font-size: 16px; }
+  details { border: 1px solid rgba(128,128,128,.3); border-radius: 10px; padding: 12px 16px; margin: 10px 0; }
+  summary { font-weight: 600; cursor: pointer; font-size: 16px; }
+  footer { border-top: 1px solid rgba(128,128,128,.25); margin-top: 48px; padding-top: 16px; font-size: 13px; color: rgba(128,128,128,.9); }
+</style>
+</head>
+<body>
+<header>
+  <div class="app-name">Led<span>Frey</span></div>
+  <div class="page-title">Support</div>
+  <div class="lang-switch"><a href="support-zh.html">中文</a></div>
+</header>
+
+<p>LedFrey is a private, multi-ledger tracking app. All ledger data is stored only on your device — no account, no cloud. Password-protected ledgers are truly encrypted on disk.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<details>
+<summary>Where is my data stored?</summary>
+<p>Entirely on your device, as files inside the App's own storage. Nothing is uploaded anywhere. If you delete the App, all data is removed with it — so make backups if the data matters to you.</p>
+</details>
+
+<details>
+<summary>How do I back up my ledgers?</summary>
+<p>Ledger files can be exported from the App (see Backup in ledger settings). A backup is a file you control — save it to Files, iCloud Drive, AirDrop, or anywhere you like. To move to a new device, transfer the files and open them with LedFrey.</p>
+</details>
+
+<details>
+<summary>I forgot a ledger password. Can I recover it?</summary>
+<p>Yes — if you saved the recovery code shown when the password was created. The recovery code can be regenerated in ledger settings (requires the current password), so store it somewhere safe. Without either the password or the recovery code, encrypted ledgers cannot be opened — this is by design and is what makes the encryption real.</p>
+</details>
+
+<details>
+<summary>How does locking work?</summary>
+<p>A password-protected ledger locks when you leave it, when the App goes to the background, or after the auto-lock timeout you configure in settings. Unlock with the password, or with Face ID if enabled. The whole App can also blur its content in the app switcher for privacy.</p>
+</details>
+
+<details>
+<summary>Why does the App show ads?</summary>
+<p>LedFrey is free, and app-open ads keep it that way. An ad may appear when you launch or return to the App (at most once every 2 hours). The optional tracking prompt controls ad personalization only — declining it does not affect any other feature. See our <a href="privacy-en.html">Privacy Policy</a> for details.</p>
+</details>
+
+<details>
+<summary>Which languages are supported?</summary>
+<p>Simplified Chinese and English. The App follows your device language on first launch, and you can switch anytime in App settings.</p>
+</details>
+
+<details>
+<summary>What does encryption mean here?</summary>
+<p>Protected ledgers are stored as encrypted files (AES-GCM); the name, icon, and contents of a locked ledger are not readable without unlocking. In the library list, locked ledgers show only a disguise name if you set one.</p>
+</details>
+
+<h2>Contact</h2>
+<p>Questions, bug reports, or suggestions: <a href="mailto:leechyu89@gmail.com">leechyu89@gmail.com</a></p>
+<p>Please include the App version (App settings → About) and a short description. We read every message.</p>
+
+<footer>
+  © 2026 LedFrey · <a href="privacy-en.html">Privacy Policy</a> · <a href="support-en.html">Support</a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LedFrey — 支持页</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    max-width: 720px; margin: 0 auto; padding: 24px 20px 60px;
+    line-height: 1.8; color: #1d1d1f; background: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e8e8ea; background: #141416; }
+    a { color: #6cb2ff; }
+  }
+  a { color: #0066cc; }
+  header { border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: 16px; margin-bottom: 28px; }
+  .app-name { font-size: 28px; font-weight: 700; letter-spacing: -.5px; }
+  .app-name span { color: #34c759; }
+  .page-title { font-size: 15px; color: rgba(128,128,128,.9); margin-top: 4px; }
+  .lang-switch { font-size: 14px; margin-top: 12px; }
+  h2 { font-size: 19px; margin-top: 36px; }
+  h3 { font-size: 16px; margin-bottom: 6px; }
+  p, li { font-size: 16px; }
+  details { border: 1px solid rgba(128,128,128,.3); border-radius: 10px; padding: 12px 16px; margin: 10px 0; }
+  summary { font-weight: 600; cursor: pointer; font-size: 16px; }
+  footer { border-top: 1px solid rgba(128,128,128,.25); margin-top: 48px; padding-top: 16px; font-size: 13px; color: rgba(128,128,128,.9); }
+</style>
+</head>
+<body>
+<header>
+  <div class="app-name">Led<span>Frey</span></div>
+  <div class="page-title">支持页</div>
+  <div class="lang-switch"><a href="support-en.html">English</a></div>
+</header>
+
+<p>LedFrey 是一款隐私优先的多账本记账应用。所有账目数据只存储在你的设备上——没有账号、没有云端。设置密码的账本在磁盘上是真实密文。</p>
+
+<h2>常见问题</h2>
+
+<details>
+<summary>我的数据存在哪里？</summary>
+<p>全部在你的设备上，以文件形式存于应用私有目录，不上传任何地方。删除应用即删除全部数据——所以重要数据请记得备份。</p>
+</details>
+
+<details>
+<summary>如何备份账本？</summary>
+<p>在账本设置中使用导出/备份功能即可导出账本文件。备份就是你掌控的一个文件——可以存到「文件」、iCloud 云盘、隔空投送，或任何你喜欢的地方。换新手机时，把这些文件传过去并用 LedFrey 打开即可。</p>
+</details>
+
+<details>
+<summary>忘记账本密码了，能找回吗？</summary>
+<p>可以——前提是你保存了设置密码时展示的恢复码。恢复码也可以随时在账本设置中重新生成（需先验证当前密码），请妥善保存。如果密码和恢复码都没有，加密账本将无法打开——这是有意设计，也是「真实加密」的意义所在。</p>
+</details>
+
+<details>
+<summary>锁定是怎么工作的？</summary>
+<p>设密码的账本在离开账本、应用退后台或超过自动锁定时间后自动上锁。解锁用密码，或开启面容 ID 后直接刷脸。应用在任务切换器中也会模糊内容，防止旁人窥视。</p>
+</details>
+
+<details>
+<summary>为什么有广告？</summary>
+<p>LedFrey 是免费应用，开屏广告是它的维持方式。广告只在你打开或回到应用时出现（每 2 小时至多一次）。启动时的跟踪授权弹窗只影响广告个性化程度——拒绝它不影响任何其他功能。详情见<a href="privacy-zh.html">隐私政策</a>。</p>
+</details>
+
+<details>
+<summary>支持哪些语言？</summary>
+<p>简体中文和英文。首次启动跟随设备语言，之后可随时在应用设置中切换。</p>
+</details>
+
+<details>
+<summary>「真实加密」是什么意思？</summary>
+<p>受密码保护的账本以加密文件（AES-GCM）形式存储。锁定状态下，账本的名称、图标、内容都无法直接读取；在账本库列表里，上锁的账本只显示你设置的伪装名（如有）。</p>
+</details>
+
+<h2>联系方式</h2>
+<p>问题反馈、Bug 报告或建议：<a href="mailto:leechyu89@gmail.com">leechyu89@gmail.com</a></p>
+<p>来信请附上应用版本号（应用设置 → 关于）和简单描述，我们会认真阅读每一封。</p>
+
+<footer>
+  © 2026 LedFrey · <a href="privacy-zh.html">隐私政策</a> · <a href="support-zh.html">支持页</a>
+</footer>
+</body>
+</html>
